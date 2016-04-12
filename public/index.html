@@ -17,19 +17,23 @@
 
       <h1 class="sitename"></h1>
 
-      <a href="/" >Home</a >
-      |
-      <a href="/signup" >Signup</a >
-      |
-      <a href="/login" >Login</a >
-      |
-      <a href="/admin" >Admin</a >
-      |
-      <a href="/browse" >Browse</a >
-      |
-      <a href="/cart" >Cart</a >
+      <nav>
+        <a href="/" >Home</a >
+        |
+        <a href="/signup" >Signup</a >
+        |
+        <a href="/login" >Login</a >
+        |
+        <a href="/admin" >Admin</a >
+        |
+        <a href="/browse" >Browse</a >
+        |
+        <a href="/cart" >Cart</a >
+      </nav>
 
-      <ng-view></ng-view>
+      <main>
+        <ng-view></ng-view>
+      </main>
 
       <footer>
         <span>&copy; 2015</span>
@@ -45,6 +49,7 @@
     <script src="/javascripts/controllers/Signup.js"></script>
     <script src="/javascripts/controllers/Login.js"></script>
     <script src="/javascripts/controllers/Browse.js"></script>
+    <script src="/javascripts/controllers/ItemDetail.js"></script>
     <script src="/javascripts/controllers/Cart.js"></script>
     <script src="/javascripts/routes.js"></script>
   </body>

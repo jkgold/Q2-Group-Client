@@ -20,6 +20,10 @@ app.config(function($routeProvider, $locationProvider){
       templateUrl: '/partials/browse.html',
       controller: 'BrowseController'
     })
+    .when('/item', {
+      templateUrl: '/partials/item_detail.html',
+      controller: 'ItemDetailController'
+    })
     .when('/cart', {
       templateUrl: '/partials/cart.html',
       controller: 'CartController'
