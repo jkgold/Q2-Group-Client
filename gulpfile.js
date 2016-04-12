@@ -9,7 +9,6 @@ gulp.task('sass', () =>{
     .pipe(gulp.dest('public/stylesheets'));
 });
 
-
 gulp.task('watch', () =>{
   gulp.watch('src/scss/**/*.scss', ['sass']);
 });
