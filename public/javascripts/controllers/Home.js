@@ -4,10 +4,10 @@ app.controller('HomeController', function ($scope, $http) {
 
   loadUserData();
 
-  $scope.title = 'Welcome';
+  $scope.title = 'Hi!';
 
   function loadUserData(){
-    $http.get(REMOTE_API)
+    $http.get(LOCAL_API)
       .then(function (data) {
         $scope.data = data.data;
       });
