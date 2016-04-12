@@ -16,7 +16,7 @@ app.config(function($routeProvider, $locationProvider){
       templateUrl: '/partials/login.html',
       controller: 'LoginController'
     })
-    .when('/item/:id', {
+    .when('/product/:id', {
       templateUrl: '/partials/product_detail.html',
       controller: 'ProductDetailController'
     })
