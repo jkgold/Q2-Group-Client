@@ -4,9 +4,9 @@ angular.module('additem', [])
       restrict: 'C',
       link: function(s,e,a){
         s.text = 'Add Item';
-        s.itemData = a.price;
+        s.product = a.product;
         e.bind('click', function(){
-          console.log(s.itemData);
+          console.log(s.product);
         })
       },
       template: "{{text}}"

@@ -3,12 +3,12 @@
 <h2>{{title}}</h2>
 
 <div class="row">
-  <div class="col-xs-6 col-sm-4 col-md-3" ng-repeat="x in products" >
+  <div class="col-xs-6 col-sm-4 col-md-3 item" height="400" ng-repeat="x in products" >
     <h4>{{x.name}}</h4>
     <img src={{x.image_url}} width="100%" className="img-responsive" />
     <h4>${{x.price}}</h4>
     <p>{{x.info}}</p>
-    <button class="additem btn btn-success" data-price="{{x.price}}">Add Item</button>
+    <button class="additem btn btn-success" data-product="{{x}}">Add Item</button>
     <a class="btn btn-info" href="/product/{{x.product_id}}">View Details</a >
   </div >
 </div>

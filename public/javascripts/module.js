@@ -1,3 +1,9 @@
-var app = angular.module('app', ['ngRoute', 'sitename', 'additem']);
+var Depends = [
+  'ngRoute',
+  'sitename',
+  'additem'
+];
+
+var app = angular.module('app', Depends);
 
 

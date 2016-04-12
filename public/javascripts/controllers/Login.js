@@ -1,14 +1,17 @@
-app.controller('LoginController', function ($scope, $http) {
+app.controller('LoginController', function ($scope, $http, $location) {
   var LOCAL_API = 'http://localhost:3000';
-  var REMOTE_API = 'https://my-testing-api.herokuapp.com';
-  var Path = '/user/login';
+  var Path = '/users/login';
   
   $scope.title = 'Login';
   
   $scope.userLogin = function(email, password){
-    $http.post(REMOTE_API + Path, {email: email, password: password})
+    $http.post(LOCAL_API + Path, {email: email, password: password})
       .then(function(data){
-        console.log(data);
+        if(data.data.error){
+          $scope.error = data.data.error
+        } else {
+          $location.path( "/" );
+        }
       })
   }
 });

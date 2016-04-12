@@ -7,6 +7,7 @@ angular.module('sitename', [])
         e.bind('click', function(){
           console.log(s.siteName);
         })
+
       },
       template: "{{siteName}}"
     }
