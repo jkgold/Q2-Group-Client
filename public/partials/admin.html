@@ -1,7 +1,18 @@
 <h2>{{title}}</h2>
 
-<form class="form-group" ng-submit="adminLogin(email, password)">
+<span class="form-error">{{error}}</span>
+
+<form class="form-group" ng-submit="adminSignup(name, email, password)">
+  <h3>Signup</h3>
+  <input class="form-control" type="text" ng-model="name" placeholder="Name" >
   <input class="form-control" type="text" ng-model="email" placeholder="Email" >
   <input class="form-control" type="password" ng-model="password" placeholder="Password" >
-  <button class="btn btn-info" >Login</button >
+  <button class="btn btn-info">Signup</button >
 </form >
+
+<!--<form class="form-group" ng-submit="adminLogin(email, password)">-->
+  <!--<h3>Login</h3>-->
+  <!--<input class="form-control" type="text" ng-model="email" placeholder="Email" >-->
+  <!--<input class="form-control" type="password" ng-model="password" placeholder="Password" >-->
+  <!--<button class="btn btn-info" >Login</button >-->
+<!--</form >-->
