@@ -1,11 +1,13 @@
 angular.module('sitename', [])
   .directive('sitename', function(){
     return{
-      restrict: 'E',
+      restrict: 'C',
       link: function(s,e,a){
-        s.fullName = "Fruite Company"
+        s.siteTitle = "Fruite Company";
+        e.bind('click', function(){
+          console.log(s.siteTitle);
+        })
       },
-      replace: true,
-      template: "<h1>{{fullName}}</h1>"
+      template: "{{siteTitle}}"
     }
 });

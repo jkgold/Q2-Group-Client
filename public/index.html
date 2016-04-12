@@ -17,8 +17,7 @@
   </head>
   <body ng-cloak>
     <div class="container-fluid">
-
-      <sitename></sitename>
+      <h1 class="sitename"></h1>
 
       <a href="/" >Home</a >
       |
@@ -33,6 +32,11 @@
       <a href="/cart" >Cart</a >
 
       <ng-view></ng-view>
+
+      <footer>
+        <span>&copy; 2015</span>
+        <span class="sitename"></span>
+      </footer>
     </div>
 
     <script src="/javascripts/directives/site_name.js"></script >
