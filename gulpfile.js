@@ -1,5 +1,10 @@
 var gulp    = require('gulp'),
     connect = require('gulp-connect'),
+    uglify = require('gulp-uglify'),
+    streamify = require('gulp-streamify'),
+    babelify = require('babelify'),
+    browserify = require('browserify'),
+    source = require('vinyl-source-stream'),
     sass    = require('gulp-sass');
 
 gulp.task('connect', function() {
@@ -16,6 +21,21 @@ gulp.task('html', function () {
     .pipe(connect.reload());
 });
 
+//          JS/ES2015
+// ***********************
+// gulp.task('scripts', () =>{
+//   browserify({
+//     entries: 'src/js/',
+//     extensions: ['.js'],
+//     debug: true
+//   })
+//     .transform(babelify, { presets: ['es2015'] })
+//     .bundle()
+//     .pipe(source('bundle.js'))
+//     .pipe(streamify(uglify()))
+//     .pipe(gulp.dest('public/javascripts'));
+// });
+
 gulp.task('sass', () =>{
   gulp.src('src/scss/main.scss')
     .pipe(sass({
@@ -26,6 +46,7 @@ gulp.task('sass', () =>{
 
 gulp.task('watch', () =>{
   gulp.watch('public/*.html', ['html']);
+  // gulp.watch('src/js/**/*.js', ['scripts']);
   gulp.watch('src/scss/**/*.scss', ['sass']);
 });
 
