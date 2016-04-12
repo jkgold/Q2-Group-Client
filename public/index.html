@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+  <head>
+    <title>Placeholder</title>
+
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+
+    <!-- Angular -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-route.min.js"></script>
+
+    <base href="/">
+
+  </head>
+  <body ng-cloak>
+    <div class="container-fluid">
+      <a href="/" >Home</a >
+      |
+      <a href="/signup" >Signup</a >
+      |
+      <a href="/login" >Login</a >
+      |
+      <a href="/admin" >Admin</a >
+      |
+      <a href="/browse" >Browse</a >
+      |
+      <a href="/cart" >Cart</a >
+
+      <ng-view></ng-view>
+    </div>
+
+    <script src="/javascripts/module.js"></script>
+    <script src="/javascripts/controllers/Home.js"></script>
+    <script src="/javascripts/controllers/Admin.js"></script>
+    <script src="/javascripts/controllers/Signup.js"></script>
+    <script src="/javascripts/controllers/Login.js"></script>
+    <script src="/javascripts/controllers/Browse.js"></script>
+    <script src="/javascripts/controllers/Cart.js"></script>
+    <script src="/javascripts/routes.js"></script>
+  </body>
+</html>
