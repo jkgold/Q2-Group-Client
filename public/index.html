@@ -11,13 +11,13 @@
     <!-- Angular -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-route.min.js"></script>
-    <script src="/javascripts/directives/site_name.js"></script >
 
     <base href="/">
 
   </head>
   <body ng-cloak>
     <div class="container-fluid">
+
       <sitename></sitename>
 
       <a href="/" >Home</a >
@@ -32,11 +32,10 @@
       |
       <a href="/cart" >Cart</a >
 
-
-
       <ng-view></ng-view>
     </div>
 
+    <script src="/javascripts/directives/site_name.js"></script >
     <script src="/javascripts/module.js"></script>
     <script src="/javascripts/controllers/Home.js"></script>
     <script src="/javascripts/controllers/Admin.js"></script>
