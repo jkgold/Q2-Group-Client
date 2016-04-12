@@ -11,12 +11,10 @@ gulp.task('connect', function() {
   });
 });
 
-
 gulp.task('html', function () {
   gulp.src('./public/*.html')
     .pipe(connect.reload());
 });
-
 
 gulp.task('sass', () =>{
   gulp.src('src/scss/main.scss')
