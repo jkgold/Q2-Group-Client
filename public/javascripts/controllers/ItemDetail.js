@@ -1,13 +1,12 @@
-app.controller('ItemDetailController', function ($scope, $http) {
-  var LOCAL_API = 'http://localhost:3000/products';
-  var REMOTE_API = 'https://my-testing-api.herokuapp.com/products';
+app.controller('ItemDetailController', function ($scope, $http, $routeParams) {
+  var LOCAL_API = 'http://localhost:3000/products/';
 
   loadProductDetail();
 
   $scope.title = 'Item Detail';
 
   function loadProductDetail(){
-    $http.get(LOCAL_API + '/12')
+    $http.get(LOCAL_API + $routeParams.id)
       .then(function (data) {
         $scope.product = data.data;
       });
