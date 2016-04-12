@@ -3,11 +3,11 @@ angular.module('sitename', [])
     return{
       restrict: 'C',
       link: function(s,e,a){
-        s.siteTitle = "Fruite Company";
+        s.siteName = "Fruite Company";
         e.bind('click', function(){
           console.log(s.siteTitle);
         })
       },
-      template: "{{siteTitle}}"
+      template: "{{siteName}}"
     }
 });
