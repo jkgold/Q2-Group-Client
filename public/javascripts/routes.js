@@ -16,13 +16,13 @@ app.config(function($routeProvider, $locationProvider){
       templateUrl: '/partials/login.html',
       controller: 'LoginController'
     })
+    .when('/item/:id', {
+      templateUrl: '/partials/product_detail.html',
+      controller: 'ProductDetailController'
+    })
     .when('/browse', {
       templateUrl: '/partials/browse.html',
       controller: 'BrowseController'
-    })
-    .when('/item/:id', {
-      templateUrl: '/partials/item_detail.html',
-      controller: 'ItemDetailController'
     })
     .when('/cart', {
       templateUrl: '/partials/cart.html',
