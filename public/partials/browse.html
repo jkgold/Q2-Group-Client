@@ -1,1 +1,9 @@
 <h2>{{title}}</h2>
+
+
+<div class="col-xs-6 col-sm-4 col-md-3" ng-repeat="x in products" >
+  <h4>{{x.name}}</h4>
+  <img src={{x.image_url}} width="100%" className="img-responsive" />
+  <h4>{{x.price}}</h4>
+  <p>{{x.info}}</p>
+</div >

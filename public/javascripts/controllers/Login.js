@@ -1,6 +1,6 @@
 app.controller('LoginController', function ($scope, $http) {
-  var LOCAL_API = 'http://localhost:3000/users';
-  var REMOTE_API = 'https://my-testing-api.herokuapp.com/users';
+  var LOCAL_API = 'http://localhost:3000';
+  var REMOTE_API = 'https://my-testing-api.herokuapp.com';
   var Path = '/user/login';
   
   $scope.title = 'Login';
@@ -11,5 +11,4 @@ app.controller('LoginController', function ($scope, $http) {
         console.log(data);
       })
   }
-  
 });
